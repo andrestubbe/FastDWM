@@ -5,7 +5,7 @@
 [![Status](https://img.shields.io/badge/status-v0.1.0--alpha-orange.svg)]()
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io)
 
 ---
 
@@ -13,6 +13,7 @@
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Installation](#installation)
+- [Running the Demo](#running-the-demo)
 - [Build from Source](#build-from-source)
 - [Roadmap](#roadmap)
 - [License](#license)
@@ -32,20 +33,66 @@ cd FastDWM
 
 # Build and register locally
 .\compile.bat
+
+# Run the Drift Test Demo
+.\run-demo.bat
 ```
 
 ## Installation
 
 ### Option 1: Maven (Recommended)
+Add the JitPack repository and the dependencies to your `pom.xml`:
+
 ```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
 <dependencies>
+    <!-- FastDWM Library -->
     <dependency>
         <groupId>io.github.andrestubbe</groupId>
         <artifactId>fastdwm</artifactId>
         <version>0.1.0</version>
     </dependency>
+
+    <!-- FastCore (Required Native Loader) -->
+    <dependency>
+        <groupId>com.github.andrestubbe</groupId>
+        <artifactId>fastcore</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
 </dependencies>
 ```
+
+### Option 2: Gradle (via JitPack)
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'io.github.andrestubbe:fastdwm:0.1.0'
+    implementation 'com.github.andrestubbe:fastcore:v1.0.0'
+}
+```
+
+### Option 3: Direct Download (No Build Tool)
+Download the latest JARs directly to add them to your classpath:
+
+1.  📦 **[fastdwm-v0.1.0.jar](https://github.com/andrestubbe/fastdwm/releases)** (The Core Library)
+2.  ⚙️ **[fastcore-v1.0.0.jar](https://github.com/andrestubbe/FastCore/releases)** (The Mandatory Native Loader)
+
+> [!IMPORTANT]
+> Both JARs must be in your classpath for the native JNI calls to function correctly.
+
+## Running the Demo
+We've included a native timing drift test to showcase the precision:
+1. Run `compile.bat` to build the native DLL.
+2. Run `run-demo.bat` to launch the **Drift Test**.
 
 ## Build from Source
 - **JDK 17+**
