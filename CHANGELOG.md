@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+
 ## [0.1.0] - 2026-04-30
+
 ### Added
-- Initial project creation following the FastJava Blueprint.
-- JNI bridge for Windows Multimedia Timers (`timeSetEvent`).
-- Support for `DwmFlush` (VSync) waiting.
-- High-precision `FastDWM.beginTimerPeriod()` for kernel-level tuning.
+- Initial JNI implementation for Windows Multimedia Timers.
+- 1ms precision heartbeat engine (timeSetEvent).
+- VSync synchronization (DwmFlush).
+- High-resolution stability benchmark demo.
+- Blueprint-compliant automated build system (compile.bat).

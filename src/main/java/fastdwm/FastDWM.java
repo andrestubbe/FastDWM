@@ -1,6 +1,6 @@
 package fastdwm;
 
-import fastcore.NativeLoader;
+import fastcore.FastCore;
 
 /**
  * FastDWM - Native Windows Timing and Composition API.
@@ -11,7 +11,7 @@ import fastcore.NativeLoader;
 public final class FastDWM {
     
     static {
-        NativeLoader.load("fastdwm");
+        FastCore.loadLibrary("fastdwm");
     }
 
     private FastDWM() {

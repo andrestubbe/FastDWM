@@ -10,11 +10,11 @@ echo Launching: Native Timing Drift Test
 echo.
 
 cd examples
-call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo"
+:: Run with -q to hide Maven noise
+call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo" -q
 if %errorlevel% neq 0 (
     echo.
     echo [ERROR] Demo failed to launch. 
-    echo Ensure you ran 'compile.bat' first to build the native DLL.
     pause
 )
 
