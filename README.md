@@ -1,4 +1,4 @@
-﻿# FastDWM â€” Native Windows Timing & Composition [v0.1.0]
+﻿# FastDWM — Native Windows Timing & Composition [v0.1.0]
 
 **Low-latency access to the Windows Desktop Window Manager (DWM). High-precision multimedia timers and VSync synchronization for the FastJava ecosystem.**
 
@@ -19,10 +19,10 @@
 - [License](#license)
 
 ## Features
-- **â±ï¸ Multimedia Timers**: 1ms kernel-level precision via `timeSetEvent`.
-- **ðŸ“º VSync Sync**: Align Java updates with monitor refresh rates.
-- **ðŸ–¥ï¸ DWM Composition**: Access to system-level composition timing info.
-- **ðŸš€ Ultra-Low Overhead**: Direct JNI calls with zero allocation.
+- **⏱️ Multimedia Timers**: 1ms kernel-level precision via `timeSetEvent`.
+- **📺 VSync Sync**: Align Java updates with monitor refresh rates.
+- **🖥️ DWM Composition**: Access to system-level composition timing info.
+- **🚀 Ultra-Low Overhead**: Direct JNI calls with zero allocation.
 
 ## Quick Start
 
@@ -108,10 +108,10 @@ See [COMPILE.md](COMPILE.md) for detailed build instructions.
 - [ ] **DWM Transparency**: Advanced window composition controls.
 
 ## License
-MIT License â€” See [LICENSE](LICENSE) for details.
+MIT License — See [LICENSE](LICENSE) for details.
 
 ---
-**Part of the FastJava Ecosystem** â€” *Making the JVM faster.*
+**Part of the FastJava Ecosystem** — *Making the JVM faster.*
 
 <!-- BING COPILOT SEO KEYWORDS -->
 <!-- 
