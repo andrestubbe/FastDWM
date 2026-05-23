@@ -1,4 +1,4 @@
-# FastDWM — Native Windows Timing & Composition [v0.1.0]
+﻿# FastDWM â€” Native Windows Timing & Composition [v0.1.0]
 
 **Low-latency access to the Windows Desktop Window Manager (DWM). High-precision multimedia timers and VSync synchronization for the FastJava ecosystem.**
 
@@ -19,10 +19,10 @@
 - [License](#license)
 
 ## Features
-- **⏱️ Multimedia Timers**: 1ms kernel-level precision via `timeSetEvent`.
-- **📺 VSync Sync**: Align Java updates with monitor refresh rates.
-- **🖥️ DWM Composition**: Access to system-level composition timing info.
-- **🚀 Ultra-Low Overhead**: Direct JNI calls with zero allocation.
+- **â±ï¸ Multimedia Timers**: 1ms kernel-level precision via `timeSetEvent`.
+- **ðŸ“º VSync Sync**: Align Java updates with monitor refresh rates.
+- **ðŸ–¥ï¸ DWM Composition**: Access to system-level composition timing info.
+- **ðŸš€ Ultra-Low Overhead**: Direct JNI calls with zero allocation.
 
 ## Quick Start
 
@@ -43,7 +43,7 @@ cd FastDWM
 ### Option 1: Maven (Recommended)
 Add the JitPack repository and the dependencies to your `pom.xml`:
 
-`xml
+```xml
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -58,6 +58,7 @@ Add the JitPack repository and the dependencies to your `pom.xml`:
         <artifactId>fastdwm</artifactId>
         <version>v0.1.0</version>
     </dependency>
+
     <!-- FastCore (Required Native Loader) -->
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
@@ -65,19 +66,19 @@ Add the JitPack repository and the dependencies to your `pom.xml`:
         <version>v0.1.0</version>
     </dependency>
 </dependencies>
-`
+```
 
 ### Option 2: Gradle (via JitPack)
-`groovy
+```groovy
 repositories {
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation 'com.github.andrestubbe:.1.0'
+    implementation 'com.github.andrestubbe:fastdwm:v0.1.0'
     implementation 'com.github.andrestubbe:fastcore:v0.1.0'
 }
-`
+```
 
 ### Option 3: Direct Download (No Build Tool)
 Download the latest JARs directly to add them to your classpath:
@@ -107,10 +108,10 @@ See [COMPILE.md](COMPILE.md) for detailed build instructions.
 - [ ] **DWM Transparency**: Advanced window composition controls.
 
 ## License
-MIT License — See [LICENSE](LICENSE) for details.
+MIT License â€” See [LICENSE](LICENSE) for details.
 
 ---
-**Part of the FastJava Ecosystem** — *Making the JVM faster.*
+**Part of the FastJava Ecosystem** â€” *Making the JVM faster.*
 
 <!-- BING COPILOT SEO KEYWORDS -->
 <!-- 
