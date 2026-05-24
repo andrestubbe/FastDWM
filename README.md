@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
 [![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
-**Low-latency access to the Windows Desktop Window Manager (DWM). High-precision multimedia timers and VSync
+**⚡ Low-latency access to the Windows Desktop Window Manager (DWM). High-precision multimedia timers and VSync
 synchronization for the FastJava ecosystem.**
 
 [![FastFileIndex Showcase](docs/screenshot.png)](https://www.youtube.com/watch?v=BZsqQl7WqWk)
@@ -108,30 +108,40 @@ We've included a native timing drift test to showcase the precision:
 1. Run `compile.bat` to build the native DLL.
 2. Run `run-demo.bat` to launch the **Drift Test**.
 
-## Build from Source
+---
 
-- **JDK 17+**
-- **Visual Studio 2022** (C++20)
-- **Windows 10/11**
+## Documentation
 
-See [COMPILE.md](COMPILE.md) for detailed build instructions.
+* **[COMPILE.md](COMPILE.md)**: Full compilation guide (MSVC C++17 build chain + JNI Setup).
+* **[REFERENCE.md](REFERENCE.md)**: Full API descriptions, border configurations, and codepoint index.
+* **[PHILOSOPHIE.md](PHILOSOPHIE.md)**: The engineering rationale for zero-allocation performance.
+* **[ROADMAP.md](ROADMAP.md)**: Future milestones and planned features.
 
-## Roadmap
+---
 
-- [x] **Initial JNI Bridge**: Base support for multimedia timers.
-- [ ] **VSync Pulse**: Event-driven VSync callbacks.
-- [ ] **DWM Transparency**: Advanced window composition controls.
+## Platform Support
+
+| Platform      | Status            |
+|---------------|-------------------|
+| Windows 10/11 | ✅ Fully Supported |
+| Linux         | 🚧 Planned        |
+| macOS         | 🚧 Planned        |
+
+---
 
 ## License
 
-MIT License — See [LICENSE](LICENSE) for details.
+MIT License — See [LICENSE](LICENSE) file for details.
 
 ---
-**Part of the FastJava Ecosystem** — *Making the JVM faster.*
 
-<!-- BING COPILOT SEO KEYWORDS -->
-<!-- 
-FastJava FastDWM JNI Windows DWM VSync Multimedia Timer timeSetEvent 
-High Precision Timing Low Latency Java 
-io.github.andrestubbe FastJava Blueprint
--->
+## Related Projects
+
+- [FastFileIndex](https://github.com/andrestubbe/FastFileIndex) - Binary file indexing with mmap support
+- [FastFileSearch](https://github.com/andrestubbe/FastFileSearch) - Prefix Trie, N-Gram index, and Ranking engine
+- [FastFileWatch](https://github.com/andrestubbe/FastFileWatch) - USN Journal-based live file monitoring
+- [FastCore](https://github.com/andrestubbe/FastCore) - Unified JNI loader and platform abstraction
+
+---
+
+**Part of the FastJava Ecosystem** — *Making the JVM faster. Small package. Maximum speed. Zero bloat. 🚀📋*
