@@ -51,28 +51,23 @@ cd FastDWM
 Add the JitPack repository and the dependencies to your `pom.xml`:
 
 ```xml
-
 <repositories>
     <repository>
         <id>jitpack.io</id>
         <url>https://jitpack.io</url>
     </repository>
 </repositories>
-
 <dependencies>
-<!-- FastDWM Library -->
-<dependency>
-    <groupId>com.github.andrestubbe</groupId>
-    <artifactId>fastdwm</artifactId>
-    <version>v0.1.0</version>
-</dependency>
-
-<!-- FastCore (Required Native Loader) -->
-<dependency>
-    <groupId>com.github.andrestubbe</groupId>
-    <artifactId>fastcore</artifactId>
-    <version>v0.1.0</version>
-</dependency>
+   <dependency>
+       <groupId>com.github.andrestubbe</groupId>
+       <artifactId>fastdwm</artifactId>
+       <version>v0.1.0</version>
+   </dependency>
+   <dependency>
+       <groupId>com.github.andrestubbe</groupId>
+       <artifactId>fastcore</artifactId>
+       <version>v0.1.0</version>
+   </dependency>
 </dependencies>
 ```
 
