@@ -1,0 +1,23 @@
+FastDWM v0.1.0 - Windows Heartbeat Visualizer (Native Timing Drift Test)
+
+This demo showcases the extreme precision of FastDWM, our native Windows JNI wrapper designed specifically to bypass the standard JVM Thread.sleep() inaccuracies. By plotting the jitter of different timing strategies at a massive 50x magnification, we expose what really happens behind the scenes in the Windows OS Scheduler.
+
+THE VISUALIZER HIGHLIGHTS:
+
+1. Hardware VSync Interrupt (Top Curve)
+Powered by native DwmFlush(), this graph shows the raw, physical refresh interval of the GPU. Notice how completely flat and perfect the line is—this guarantees 100% tear-free, micro-stutter-free rendering for UI and Game Loops.
+
+2. Native OS Multimedia Timer (Bottom Curve)
+Powered by timeSetEvent/timeBeginPeriod(1), this graph tracks a highly optimized 1ms native OS callback. While much better than Java's default Thread.sleep(), you can still clearly see the scheduler drift ("jitter") caused by Windows CPU context switching.
+
+This is why the FastJava ecosystem relies on FastDWM for hardware-locked animation timelines!
+
+⚙️ Architecture:
+- Zero Swing/AWT overhead.
+- Direct C++ to Win32/DWM Hooks.
+- Subpixel Anti-Aliasing (ClearType LCD_HRGB) and continuous Path2D rendering for the UI.
+- Custom Window theming via FastTheme integration.
+
+Enjoy the buttery smooth 60/144Hz logic loops!
+
+#Java #Performance #JNI #FastDWM #FastJava #GameDev #SoftwareEngineering

@@ -1,4 +1,4 @@
-﻿# FastDWM — Native Windows Timing & Composition [v0.1.0]
+# FastDWM — Native Windows Timing & Composition [v0.1.0]
 
 [![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastDWM/releases/tag/v0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,22 +13,9 @@ synchronization for the FastJava ecosystem.**
 
 ---
 
-## Table of Contents
+## Why FastDWM?
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Running the Demo](#running-the-demo)
-- [Build from Source](#build-from-source)
-- [Roadmap](#roadmap)
-- [License](#license)
-
-## Features
-
-- **⏱️ Multimedia Timers**: 1ms kernel-level precision via `timeSetEvent`.
-- **📺 VSync Sync**: Align Java updates with monitor refresh rates.
-- **🖥️ DWM Composition**: Access to system-level composition timing info.
-- **🚀 Ultra-Low Overhead**: Direct JNI calls with zero allocation.
+Java's standard UI loops (Swing/AWT/JavaFX) are completely disconnected from the underlying OS compositor (Desktop Window Manager). This leads to tearing, micro-stutters, and input lag. **FastDWM** breaks Java out of its sandbox by providing direct JNI access to `DwmFlush()`, allowing your render loops to perfectly lock onto the physical monitor refresh rate (VSync) with zero allocations. Additionally, it offers direct access to the Windows Multimedia Timer API (`timeSetEvent`) to request true 1ms scheduling precision from the Windows Kernel, bypassing Java's notoriously inaccurate `Thread.sleep()`.
 
 ## Quick Start
 

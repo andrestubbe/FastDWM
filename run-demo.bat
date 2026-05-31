@@ -1,21 +1,12 @@
 @echo off
-setlocal
-cd /d "%~dp0"
+chcp 65001 >nul
 
-echo ===========================================
-echo FastDWM Demo (v0.1.0)
-echo ===========================================
-echo.
-echo Launching: Native Timing Drift Test
-echo.
+echo ⚡ Building Main Project...
+call mvn -q clean install -DskipTests
+if %ERRORLEVEL% NEQ 0 ( pause & exit /b )
 
+echo 🚀 Running Demo...
 cd examples
-:: Run with -q to hide Maven noise
 call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo" -q
-if %errorlevel% neq 0 (
-    echo.
-    echo [ERROR] Demo failed to launch. 
-    pause
-)
-
-cd ..
+cd ..\..
+pause
