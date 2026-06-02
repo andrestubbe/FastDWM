@@ -43,15 +43,7 @@
 
     <build>
         <resources>
-            <!-- Bundle the native DLL into the JAR -->
-            <resource>
-                <directory>build</directory>
-                <targetPath>native</targetPath>
-                <includes>
-                    <include>*.dll</include>
-                </includes>
-            </resource>
-            <!-- Standard resources -->
+            <!-- Standard resources (includes native/fastdwm.dll) -->
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
