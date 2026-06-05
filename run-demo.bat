@@ -1,9 +1,8 @@
-﻿@echo off
-chcp 65001 >nul
+@echo off
 
 
 echo ðŸš€ Running Demo...
 cd examples
-call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo" -q
+call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo"
 cd ..\..
 pause
