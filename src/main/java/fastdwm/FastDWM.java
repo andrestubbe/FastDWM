@@ -11,7 +11,7 @@ import fastcore.FastCore;
 public final class FastDWM {
     
     static {
-        FastCore.loadLibrary("fastdwm");
+        fastcore.LibraryLoader.load("fastdwm", FastDWM.class);
     }
 
     private FastDWM() {

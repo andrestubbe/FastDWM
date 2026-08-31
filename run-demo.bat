@@ -10,7 +10,7 @@ if %ERRORLEVEL% NEQ 0 ( echo ❌ Build failed. & pause & exit /b %ERRORLEVEL% )
 
 echo 🚀 Running FastDWM Demo...
 cd examples
-call mvn compile exec:java -Dexec.mainClass="fastdwm.Demo" -q
+call mvn compile exec:java -q
 if %ERRORLEVEL% NEQ 0 ( echo ❌ Demo execution failed. & pause & exit /b %ERRORLEVEL% )
 
 cd ..
