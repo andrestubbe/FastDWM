@@ -6,15 +6,18 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
 [![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe/FastDWM)
 
+---
+
 **⚡ Low-latency access to the Windows Desktop Window Manager (DWM). High-precision multimedia timers and VSync synchronization for the FastJava ecosystem.**
+
+**FastDWM** is the low-level Windows composition and timing substrate of the **FastJava** ecosystem. It provides direct JNI access to `DwmFlush()`, allowing render loops to perfectly lock onto the physical monitor refresh rate (VSync) with zero allocations. Additionally, it offers direct access to the Windows Multimedia Timer API (`timeBeginPeriod` / `timeSetEvent`) to request true 1ms scheduling precision from the Windows Kernel, bypassing Java's notoriously inaccurate `Thread.sleep()`.
+
+It is the foundation that powers **[FastAnimation](https://github.com/andrestubbe/FastAnimation)**, **[FastExecution](https://github.com/andrestubbe/FastExecution)**, and **[FastTween](https://github.com/andrestubbe/FastTween)** for zero-jitter native heartbeats and hardware-locked timelines.
 
 [![FastDWM Showcase](docs/screenshot.png)](https://youtu.be/iIx3bY8E8h0)
 
----
-
-## Quick Start
-
 ```java
+// Quick Start — Example
 import fastdwm.FastDWM;
 
 public class Demo {
