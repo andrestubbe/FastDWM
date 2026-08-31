@@ -25,23 +25,30 @@ import fastdwm.FastDWM;
 
 public class Example {
     public static void main(String[] args) {
-        // 1. Request true 1ms scheduler resolution from Windows Kernel
-        FastDWM.beginTimerPeriod(1);
-
-        try {
-            // 2. Hardware-locked render loop synced to monitor VSync (0% tearing, 0 allocations)
-            for (int frame = 0; frame < 300; frame++) {
-                FastDWM.waitForVSync(); // Blocks until physical monitor vertical blank (DwmFlush)
-                renderFrame(frame);
+        // 1. Hardware-synced render loop locked to physical monitor VSync (0% tearing)
+        Thread renderThread = new Thread(() -> {
+            while (true) {
+                FastDWM.waitForVSync(); // Blocks thread until the next physical DWM VSync pulse
+                renderFrame();
             }
-        } finally {
-            // 3. Restore default OS timer resolution
-            FastDWM.endTimerPeriod(1);
-        }
+        });
+        renderThread.start();
+
+        // 2. Sub-millisecond periodic native timer (1ms multimedia timer callback)
+        int timerId = FastDWM.createPeriodicTimer(1, () -> {
+            processHighPrecisionAudioOrPhysics();
+        });
+
+        // 3. Stop native timer when finished
+        // FastDWM.killTimer(timerId);
     }
 
-    private static void renderFrame(int frame) {
+    private static void renderFrame() {
         // Render tick with zero jitter
+    }
+
+    private static void processHighPrecisionAudioOrPhysics() {
+        // 1ms native tick
     }
 }
 ```
