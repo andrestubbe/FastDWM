@@ -251,7 +251,7 @@ Download the latest JARs directly to add them to your classpath:
 
 ## License
 
-MIT License — See [LICENSE](LICENSE) for details.
+MIT License — See [LICENSE](docs/LICENSE) for details.
 
 ---
 
