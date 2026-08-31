@@ -16,11 +16,14 @@ It is the foundation that powers **[FastAnimation](https://github.com/andrestubb
 
 [![FastDWM Showcase](docs/screenshot.png)](https://youtu.be/iIx3bY8E8h0)
 
+---
+
+## Quick Start
+
 ```java
-// Quick Start — Example
 import fastdwm.FastDWM;
 
-public class Demo {
+public class Example {
     public static void main(String[] args) {
         // 1. Request true 1ms scheduler resolution from Windows Kernel
         FastDWM.beginTimerPeriod(1);
@@ -45,9 +48,10 @@ public class Demo {
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Why FastDWM?](#why-fastdwm)
+- [Quick Start](#quick-start)
 - [Key Features](#key-features)
 - [Architecture](#architecture)
 - [Real-World Examples](#real-world-examples)
@@ -57,6 +61,7 @@ public class Demo {
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Platform Support](#platform-support)
+- [License](#license)
 - [Related Projects](#related-projects)
 - [License](#license)
 
