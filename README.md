@@ -178,11 +178,6 @@ FastDWM is rigorously profiled against the standard Windows JVM scheduler to gua
 | **Windows Heartbeat Visualizer** | [Demo.java](examples/src/main/java/fastdwm/Demo.java) | `run-demo.bat` | 50x magnified real-time telemetry comparing DWM hardware VSync vs Windows OS timer drift. |
 | **JMH Microbenchmark Suite** | [Benchmark.java](examples/Benchmark/src/main/java/fastdwm/benchmark/Benchmark.java) | `run-benchmark.bat` | OpenJDK JMH throughput & latency test suite for kernel period switching. |
 
-Run the hero visualizer demo locally from the command line:
-```bash
-.\run-demo.bat
-```
-
 ---
 
 ## Installation
