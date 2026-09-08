@@ -14,7 +14,7 @@
 
 It is the foundation that powers **[FastAnimation](https://github.com/andrestubbe/FastAnimation)**, **[FastExecution](https://github.com/andrestubbe/FastExecution)**, and **[FastTween](https://github.com/andrestubbe/FastTween)** for zero-jitter native heartbeats and hardware-locked timelines.
 
-[**Watch Demo (YouTube)**](https://youtu.be/iIx3bY8E8h0) | <span style="color:#333333">Watch JMH Benchmark (Youtube)</span>
+[**Watch Demo (YouTube)**](https://youtu.be/iIx3bY8E8h0) | Watch JMH Benchmark (Youtube)
 
 [![FastDWM Showcase](docs/screenshot.png)](https://youtu.be/iIx3bY8E8h0)
 
