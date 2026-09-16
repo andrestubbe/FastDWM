@@ -242,11 +242,11 @@ Download the latest JARs directly to add them to your classpath:
 
 ## Platform Support
 
-| Platform | Status |
-|---|---|
-| Windows 10/11 (x64) | ✅ Fully Supported (Native `dwmapi.dll` + `winmm.dll`) |
-| Linux (x64 / AArch64) | 🚧 Planned (`DRM/KMS` VSync Bridge) |
-| macOS (Apple Silicon / Intel) | 🚧 Planned (`CVDisplayLink` Bridge) |
+| Platform | Architecture | Status | Driver / Subsystem |
+|:---|:---:|:---:|:---|
+| **Windows 10 / 11** | x64 | ✅ Fully Supported | Native `dwmapi.dll` + `winmm.dll` Precision Timers |
+| **Linux** | x64 / AArch64 | 🚧 Planned | Direct Rendering Manager (`DRM/KMS`) VSync Bridge |
+| **macOS** | Apple Silicon / x64 | 🚧 Planned | CoreVideo Display Link (`CVDisplayLink`) |
 
 ---
 
