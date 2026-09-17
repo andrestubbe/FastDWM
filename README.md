@@ -83,6 +83,13 @@ Java's standard UI loops (Swing/AWT/JavaFX) and game loops are completely discon
 1. **Physical VSync Synchronization**: Direct JNI access to `DwmFlush()` allows your render loops to perfectly lock onto the physical monitor refresh rate (60 Hz, 120 Hz, 144 Hz, 240 Hz) with zero CPU burn and zero heap allocations.
 2. **1ms Kernel Timer Resolution**: Direct access to `timeBeginPeriod(1)` and `timeSetEvent` requests sub-millisecond timer granularity directly from the Windows Kernel scheduler, completely eliminating timer jitter.
 
+| Feature | Thread.sleep() / Timer | JavaFX AnimationTimer | FastDWM |
+|:---|:---|:---|:---|
+| **Timer Granularity** | ~15.6 ms OS scheduler quantization| ~1-2 ms UI pulse tick | **True 1 ms (WinMM kernel interrupt)**|
+| **Compositor VSync Sync**| None (Completely unsynchronized)| Internal scenegraph pulse | **Direct hardware `DwmFlush()` lock** |
+| **Monitor Refresh Rates**| Stutters on > 60 Hz monitors | Capped to UI render loop | **Arbitrary physical Hz (120/144/240 Hz)**|
+| **Thread CPU Load** | High spin-wait or high jitter | Moderate JavaFX UI overhead | **Zero CPU burn (Kernel wait object)** |
+
 ---
 
 ## Key Features
